@@ -1,8 +1,8 @@
-/* PNDS — blue & white. 8px spacing scale, one radius, one shadow. */
+/* Just some CSS stuff/*/
 :root {
   --navy: #0b3a75;
   --navy-dark: #072852;
-  --blue: #0aa5e8;        /* logo blue — accents only, never text on white */
+  --blue: #0aa5e8;        /* make sure the color contrast is good*/
   --blue-tint: #eaf6fd;
   --white: #ffffff;
   --ink: #0f1f33;
