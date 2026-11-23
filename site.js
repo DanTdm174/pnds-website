@@ -26,3 +26,23 @@
     });
   });
 })();
+
+// Class sign-up: build a pre-filled email from the form instead of posting anywhere.
+(function () {
+  var form = document.getElementById('signup-form');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    var lines = [];
+    Array.prototype.forEach.call(form.elements, function (el) {
+      if (!el.name) return;
+      lines.push(el.name + ': ' + (el.value.trim() || '-'));
+    });
+    var name = form.elements['Student name'].value.trim();
+    var subject = 'Fall Courses 2026 sign-up: ' + name;
+    var body = 'Hi PNDS,\n\nI would like to sign up for Fall Courses 2026.\n\n' + lines.join('\n') + '\n';
+    window.location.href = 'mailto:pnds.inquiry@gmail.com?subject=' +
+      encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+})();
