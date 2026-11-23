@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pacific Northwest Debate Society (PNDS)</title>
   <meta name="description" content="PNDS is a student-led debate society for debaters in BC and beyond. See our upcoming and past events, meet the team, and apply to join our staff.">
-  <meta name="theme-color" content="#0b3a75">
+  <meta name="theme-color" content="#111D2E">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Pacific Northwest Debate Society">
   <meta property="og:title" content="Pacific Northwest Debate Society (PNDS)">
@@ -18,48 +18,79 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="PNDS home">
-        <img src="assets/pnds-logo.jpg" alt="" width="44" height="44">
-        <span>PNDS</span>
+      <a class="brand" href="#top" aria-label="Pacific Northwest Debate Society, home">
+        <img src="assets/pnds-logo.jpg" alt="" width="40" height="40">
+        <span class="brand-name">Pacific Northwest <br>Debate Society</span>
       </a>
       <nav aria-label="Primary">
         <ul class="nav-list">
           <li><a href="#events">Events</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a class="button" href="#apply">Apply</a></li>
+          <li class="nav-hide-sm"><a href="#sponsors">Support</a></li>
+          <li><a class="button button-sm" href="#apply">Apply</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" id="top">
-      <div class="container">
-        <p class="eyebrow">Pacific Northwest Debate Society</p>
-        <h1>Your voice, our mission.</h1>
-        <p class="lede">A student-led, non-profit debate society running affordable classes, camps, and tournaments for debaters in BC and beyond.</p>
-        <div class="button-row">
-          <a class="button button-light" href="#events">See our events</a>
-          <a class="button button-secondary" href="#apply">Apply to join the staff</a>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">BC &amp; Pacific Northwest · Est. 2023</p>
+          <h1 id="hero-title">Affordable debate coaching and charity tournaments, run by students.</h1>
+          <p class="lede">PNDS is a student-led, non-profit society running low-cost classes, camps, and tournaments for debaters in BC and beyond. What we earn from events goes to charity.</p>
+          <div class="button-row">
+            <a class="button" href="#events">See our events</a>
+            <a class="button button-secondary" href="#apply">Join the staff</a>
+          </div>
         </div>
+        <figure class="hero-figure">
+          <div class="photo-frame">
+            <!-- Swap in a PNDS tournament or workshop photo (any size; it is cropped to 4:3). -->
+            <img src="assets/photos/team-canada-flag.jpg" alt="A group of BC debaters in formal wear holding a Canadian flag at a tournament" width="1600" height="1119">
+          </div>
+          <figcaption>BC debaters at an international invitational tournament.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section section-tinted" id="events">
+    <section class="impact" aria-label="Our impact so far">
       <div class="container">
-        <h2>Upcoming events</h2>
-        <p class="section-intro">What's running now and what's coming next.</p>
-        <article class="card event">
+        <!-- Edit these figures as they change. -->
+        <dl class="impact-grid">
+          <div class="impact-item">
+            <dt>Students coached</dt>
+            <dd class="impact-num">—</dd>
+          </div>
+          <div class="impact-item">
+            <dt>Tournaments &amp; camps hosted</dt>
+            <dd class="impact-num">—</dd>
+          </div>
+          <div class="impact-item">
+            <dt>Funds donated to charity</dt>
+            <dd class="impact-num">—</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="events" aria-labelledby="events-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="events-title">Upcoming events</h2>
+        </header>
+        <article class="event">
           <div class="date-badge" aria-hidden="true"><span class="m">Every</span><span class="d">Tue</span></div>
-          <div>
+          <div class="event-body">
             <p class="event-meta">Ongoing · Zoom · Tuesdays, 4:00–5:30 pm PT</p>
             <h3>PNDS Fall Courses 2026</h3>
             <p>Our debate classes are running now, every Tuesday from 4:00 to 5:30 pm Pacific Time. It’s not too late to join. Email us or message our WeChat (pnds_inquiry) to sign up.</p>
@@ -69,141 +100,154 @@
       </div>
     </section>
 
-    <section class="section" id="past-events">
+    <section class="section section-rule" id="past-events" aria-labelledby="past-title">
       <div class="container">
-        <h2>Past events</h2>
-        <p class="section-intro">Tournaments and camps we've run.</p>
-        <div class="past-grid">
-          <article class="card">
-            <p class="event-meta">2023 · Online tournament</p>
-            <h3>Pacific Youth Invitational</h3>
-            <p>A low-cost, online charity tournament. Proceeds after expenses went to charity.</p>
-            <a class="text-link" href="https://www.tabroom.com/index/tourn/main.mhtml?tourn_id=29899" target="_blank" rel="noopener">View on Tabroom</a>
-          </article>
-          <article class="card">
-            <p class="event-meta">2023 · Camp</p>
-            <h3>PNDS Summer Camp 2023</h3>
-            <p>A seasonal debate camp to build debating skills in a short time and meet other students who love debate. All earnings were donated.</p>
-          </article>
-        </div>
+        <header class="section-head">
+          <h2 id="past-title">Past events</h2>
+        </header>
+        <ol class="past-list" reversed>
+          <li class="past-item">
+            <p class="past-year">2023</p>
+            <div>
+              <p class="event-meta">Online tournament</p>
+              <h3>Pacific Youth Invitational</h3>
+              <p>A low-cost, online charity tournament. Proceeds after expenses went to charity.</p>
+              <a class="text-link" href="https://www.tabroom.com/index/tourn/main.mhtml?tourn_id=29899" target="_blank" rel="noopener">View on Tabroom</a>
+            </div>
+          </li>
+          <li class="past-item">
+            <p class="past-year">2023</p>
+            <div>
+              <p class="event-meta">Camp</p>
+              <h3>PNDS Summer Camp 2023</h3>
+              <p>A seasonal debate camp to build debating skills in a short time and meet other students who love debate. All earnings were donated.</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section class="section section-tinted" id="team">
+    <section class="section section-alt" id="team" aria-labelledby="team-title">
       <div class="container">
-        <h2>Meet the team</h2>
-        <p class="section-intro">PNDS is run by a student executive board.</p>
+        <header class="section-head">
+          <h2 id="team-title">Meet the team</h2>
+        </header>
         <div class="team-grid">
           <article class="member">
-            <img src="assets/team/flora-tu.jpg" alt="Flora Tu" width="540" height="688" loading="lazy">
-            <h3>Flora Tu</h3>
-            <p class="role">Co-President</p>
-          </article>
-          <article class="member">
-            <img src="assets/team/angelina-guo.jpg" alt="Angelina Guo" width="540" height="688" loading="lazy">
-            <h3>Angelina Guo</h3>
-            <p class="role">Co-President</p>
-          </article>
-          <article class="member">
-            <img src="assets/team/marcus-zhang.jpg" alt="Marcus Zhang" width="540" height="688" loading="lazy">
-            <h3>Marcus Zhang</h3>
-            <p class="role">Co-President &amp; Coaching Director</p>
-          </article>
-          <article class="member">
-            <img src="assets/team/miguel-de-las-alas.jpg" alt="Miguel De Las Alas" width="540" height="688" loading="lazy">
-            <h3>Miguel De Las Alas</h3>
-            <p class="role">Director of Fundraising</p>
-          </article>
-          <article class="member">
-            <img src="assets/team/victor-chen.jpg" alt="Victor Chen" width="540" height="688" loading="lazy">
-            <h3>Victor Chen</h3>
-            <p class="role">Coaching Director</p>
-          </article>
-        </div>
-
-        <div class="bios">
-          <article class="bio">
-            <img src="assets/team/flora-tu.jpg" alt="" width="540" height="688" loading="lazy">
-            <div class="prose">
+            <img src="assets/team/flora-tu.jpg" alt="Portrait of Flora Tu" width="540" height="688" loading="lazy">
+            <div class="member-body">
               <h3>Flora Tu</h3>
               <p class="role">Co-President</p>
-              <p>Flora Tu is a senior at Burnaby North Secondary School. She started debate in 8th grade at Vancouver Debate Academy. There, she debated under "VDA - Vancouver TZ" and ranked as the top 2025–2026 season international team in NDCA points and bid count. She was also tied for 17th in bid count in Public Forum in the world. Outside of debate, Flora likes to play piano and collect vinyl.</p>
-              <h4>Notable awards</h4>
-              <ul>
-                <li>8 career bids to Tournament of Champions</li>
-                <li>2026 Florida Blue Key: 2nd Seed</li>
-                <li>2025 Peach State: Quarterfinalist</li>
-                <li>2024 Lower Mainland East: Champion + Top Speaker</li>
-                <li>2024 Stanford Invitational: Semifinalist</li>
-                <li>2021 Harvard National Tournament: Octafinalist</li>
-              </ul>
+              <div class="member-bio" id="bio-flora-tu">
+                <p>Flora Tu is a senior at Burnaby North Secondary School. She started debate in 8th grade at Vancouver Debate Academy. There, she debated under "VDA - Vancouver TZ" and ranked as the top 2025–2026 season international team in NDCA points and bid count. She was also tied for 17th in bid count in Public Forum in the world. Outside of debate, Flora likes to play piano and collect vinyl.</p>
+                <h4>Notable awards</h4>
+                <ul>
+                  <li>8 career bids to Tournament of Champions</li>
+                  <li>2026 Florida Blue Key: 2nd Seed</li>
+                  <li>2025 Peach State: Quarterfinalist</li>
+                  <li>2024 Lower Mainland East: Champion + Top Speaker</li>
+                  <li>2024 Stanford Invitational: Semifinalist</li>
+                  <li>2021 Harvard National Tournament: Octafinalist</li>
+                </ul>
+              </div>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-flora-tu" hidden>Read bio</button>
             </div>
           </article>
-          <article class="bio">
-            <img src="assets/team/angelina-guo.jpg" alt="" width="540" height="688" loading="lazy">
-            <div class="prose">
+          <article class="member">
+            <img src="assets/team/angelina-guo.jpg" alt="Portrait of Angelina Guo" width="540" height="688" loading="lazy">
+            <div class="member-body">
               <h3>Angelina Guo</h3>
               <p class="role">Co-President</p>
-              <p>Angelina Guo is a Junior at Hugh McRoberts Secondary. She has been involved with the Pacific Northwest Debate Society for 2 years where she teaches debate and organizes events. She competes in varsity Public Forum and has most notably received awards from Stanford, Harvard, and Berkeley. Outside of debate, Angelina serves as Co-President of Adopt Our Community, serves food insecure populations in the Lower Mainland, competes in international MOOT Court Competitions as an outstanding attorney, and is a Petty Officer First Class with RCSCC Fraser.</p>
-              <h4>Notable awards</h4>
-              <ul>
-                <li>Ranked 8th internationally on the MSPF scoreboard among 2,000 teams</li>
-                <li>2023 WSC Global Xiamen: Showcase Speaker (top 8 of 1,500)</li>
-                <li>2024 Seattle University PF Tournament: 2x Champion (Spring and Fall)</li>
-                <li>2024 Vancouver WSC: 3rd Place Team</li>
-                <li>2024 Berkeley Invitational: Quarterfinalist</li>
-              </ul>
+              <div class="member-bio" id="bio-angelina-guo">
+                <p>Angelina Guo is a Junior at Hugh McRoberts Secondary. She has been involved with the Pacific Northwest Debate Society for 2 years where she teaches debate and organizes events. She competes in varsity Public Forum and has most notably received awards from Stanford, Harvard, and Berkeley. Outside of debate, Angelina serves as Co-President of Adopt Our Community, serves food insecure populations in the Lower Mainland, competes in international MOOT Court Competitions as an outstanding attorney, and is a Petty Officer First Class with RCSCC Fraser.</p>
+                <h4>Notable awards</h4>
+                <ul>
+                  <li>Ranked 8th internationally on the MSPF scoreboard among 2,000 teams</li>
+                  <li>2023 WSC Global Xiamen: Showcase Speaker (top 8 of 1,500)</li>
+                  <li>2024 Seattle University PF Tournament: 2x Champion (Spring and Fall)</li>
+                  <li>2024 Vancouver WSC: 3rd Place Team</li>
+                  <li>2024 Berkeley Invitational: Quarterfinalist</li>
+                </ul>
+              </div>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-angelina-guo" hidden>Read bio</button>
             </div>
           </article>
-          <article class="bio">
-            <img src="assets/team/marcus-zhang.jpg" alt="" width="540" height="688" loading="lazy">
-            <div class="prose">
+          <article class="member">
+            <img src="assets/team/marcus-zhang.jpg" alt="Portrait of Marcus Zhang" width="540" height="688" loading="lazy">
+            <div class="member-body">
               <h3>Marcus Zhang</h3>
               <p class="role">Co-President &amp; Coaching Director</p>
-              <p>As a junior at Magee Secondary School, Marcus is beyond ecstatic to serve as Co-President of PNDS for the 2026–27 term. He is committed to breaking down the pervasive barriers that prevent young and blossoming students from pursuing debate by providing free classes and tournament opportunities. He hopes that all new debaters will become enamoured with debate as he once was as a naive fourth grader, and that they are able to find their own voice within PNDS or debate in general. In his free time, he can be found stuck choosing which toppings to get on his Oakberry bowl, trying to understand (with much failure) whatever critical theory he has stumbled upon, or simply perusing the newest items within a grocery store.</p>
+              <div class="member-bio" id="bio-marcus-zhang">
+                <p>As a junior at Magee Secondary School, Marcus is beyond ecstatic to serve as Co-President of PNDS for the 2026–27 term. He is committed to breaking down the pervasive barriers that prevent young and blossoming students from pursuing debate by providing free classes and tournament opportunities. He hopes that all new debaters will become enamoured with debate as he once was as a naive fourth grader, and that they are able to find their own voice within PNDS or debate in general. In his free time, he can be found stuck choosing which toppings to get on his Oakberry bowl, trying to understand (with much failure) whatever critical theory he has stumbled upon, or simply perusing the newest items within a grocery store.</p>
+              </div>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-marcus-zhang" hidden>Read bio</button>
             </div>
           </article>
-          <article class="bio">
-            <img src="assets/team/miguel-de-las-alas.jpg" alt="" width="540" height="688" loading="lazy">
-            <div class="prose">
+          <article class="member">
+            <img src="assets/team/miguel-de-las-alas.jpg" alt="Portrait of Miguel De Las Alas" width="540" height="688" loading="lazy">
+            <div class="member-body">
               <h3>Miguel De Las Alas</h3>
               <p class="role">Director of Fundraising</p>
-              <p>Miguel is experienced in the formats of Lincoln-Douglas, Public Forum, the Canadian National Debate Format, and British Parliament. He is also well versed in Model UN. Outside of debate, Miguel is a 10th grade student at Richmond Christian School and plans to become a computational neuropathologist, leveraging computational tools to detect diseases. Currently, he is using deep learning to detect cognitive impairment in 3D volumetric brain scans, and has secured mentorship at the University of British Columbia. He also leads clubs at RCS that aim to inquire critically and to give back to the community.</p>
-              <h4>Notable accomplishments</h4>
-              <ul>
-                <li>Founder and Lead Developer of FUNNEL, a 3D neural network research project on brain MRI, presented to UBC faculty</li>
-                <li>2025 TEDxRCSYouth Speaker on neurodiversity</li>
-                <li>2024 Greater Vancouver Regional Science Fair: Silver Medalist</li>
-                <li>SchoolReach: 3rd at Alberta Provincials (Junior), 4th at Nationals</li>
-              </ul>
+              <div class="member-bio" id="bio-miguel-de-las-alas">
+                <p>Miguel is experienced in the formats of Lincoln-Douglas, Public Forum, the Canadian National Debate Format, and British Parliament. He is also well versed in Model UN. Outside of debate, Miguel is a 10th grade student at Richmond Christian School and plans to become a computational neuropathologist, leveraging computational tools to detect diseases. Currently, he is using deep learning to detect cognitive impairment in 3D volumetric brain scans, and has secured mentorship at the University of British Columbia. He also leads clubs at RCS that aim to inquire critically and to give back to the community.</p>
+                <h4>Notable accomplishments</h4>
+                <ul>
+                  <li>Founder and Lead Developer of FUNNEL, a 3D neural network research project on brain MRI, presented to UBC faculty</li>
+                  <li>2025 TEDxRCSYouth Speaker on neurodiversity</li>
+                  <li>2024 Greater Vancouver Regional Science Fair: Silver Medalist</li>
+                  <li>SchoolReach: 3rd at Alberta Provincials (Junior), 4th at Nationals</li>
+                </ul>
+              </div>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-miguel-de-las-alas" hidden>Read bio</button>
             </div>
           </article>
-          <article class="bio">
-            <img src="assets/team/victor-chen.jpg" alt="" width="540" height="688" loading="lazy">
-            <div class="prose">
+          <article class="member">
+            <img src="assets/team/victor-chen.jpg" alt="Portrait of Victor Chen" width="540" height="688" loading="lazy">
+            <div class="member-body">
               <h3>Victor Chen</h3>
               <p class="role">Coaching Director</p>
-              <p>Victor is a senior in Grandview Heights Secondary and has debated for 6 years with experience in CNDF, PF, Worlds, and BP. He leads his school's debate club as President, and serves as the coaching director of PNDS. Outside of the debate space, he loves to read, talk about philosophy, and play golf.</p>
-              <h4>Notable awards</h4>
-              <ul>
-                <li>2024 Stanford Invitational: Octafinalist and 8th Speaker</li>
-                <li>2024 DTA: Octafinalist</li>
-                <li>2024 Harvard International Round Robin Qualifier</li>
-                <li>2023 Digital TOC #3: Octafinalist</li>
-                <li>2023 Harvard National Tournament: Doubles</li>
-              </ul>
+              <div class="member-bio" id="bio-victor-chen">
+                <p>Victor is a senior in Grandview Heights Secondary and has debated for 6 years with experience in CNDF, PF, Worlds, and BP. He leads his school's debate club as President, and serves as the coaching director of PNDS. Outside of the debate space, he loves to read, talk about philosophy, and play golf.</p>
+                <h4>Notable awards</h4>
+                <ul>
+                  <li>2024 Stanford Invitational: Octafinalist and 8th Speaker</li>
+                  <li>2024 DTA: Octafinalist</li>
+                  <li>2024 Harvard International Round Robin Qualifier</li>
+                  <li>2023 Digital TOC #3: Octafinalist</li>
+                  <li>2023 Harvard National Tournament: Doubles</li>
+                </ul>
+              </div>
+              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-victor-chen" hidden>Read bio</button>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="band section" id="apply">
-      <div class="container">
-        <h2>Apply to join our staff</h2>
-        <p class="prose">We're looking for students who want to help run PNDS, from organizing tournaments and outreach to coaching new debaters. Fill out the staff application and we'll be in touch.</p>
-        <div class="button-row">
-          <a class="button button-light" href="https://docs.google.com/forms/d/e/1FAIpQLSfHoYiHTnvd3KwUg0J9CZU2TYNbHpRsZJ3i6p0VU7gei8gdMw/viewform" target="_blank" rel="noopener">Open the staff application</a>
+    <section class="band section" id="apply" aria-labelledby="apply-title">
+      <div class="container band-inner">
+        <div>
+          <h2 id="apply-title">Apply to join our staff</h2>
+          <p class="prose">We're looking for students who want to help run PNDS, from organizing tournaments and outreach to coaching new debaters. Fill out the staff application and we'll be in touch.</p>
+        </div>
+        <a class="button button-light" href="https://docs.google.com/forms/d/e/1FAIpQLSfHoYiHTnvd3KwUg0J9CZU2TYNbHpRsZJ3i6p0VU7gei8gdMw/viewform" target="_blank" rel="noopener">Open the staff application</a>
+      </div>
+    </section>
+
+    <section class="section" id="sponsors" aria-labelledby="sponsors-title">
+      <div class="container sponsors-grid">
+        <div>
+          <h2 id="sponsors-title">Sponsors &amp; support</h2>
+          <p class="prose">Sponsorship keeps our classes low-cost and lets more of each tournament's proceeds go to charity. Our sponsorship package sets out partnership tiers, where your name appears, and how funds are used.</p>
+        </div>
+        <div class="sponsor-panel">
+          <h3>Sponsorship package</h3>
+          <p>Request the PNDS Sponsorship Package, or write to our Director of Fundraising, Miguel De Las Alas, about supporting a tournament or camp.</p>
+          <div class="button-row">
+            <!-- When the package PDF is in assets/, point this button at it and add the download attribute. -->
+            <a class="button" href="mailto:pnds.inquiry@gmail.com?subject=Request%3A%20PNDS%20Sponsorship%20Package">Request the package</a>
+            <a class="button button-secondary" href="mailto:pnds.inquiry@gmail.com?subject=Attn%3A%20Director%20of%20Fundraising">Contact fundraising</a>
+          </div>
         </div>
       </div>
     </section>
@@ -222,6 +266,7 @@
           <li><a href="#past-events">Past events</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#apply">Apply</a></li>
+          <li><a href="#sponsors">Sponsors &amp; support</a></li>
         </ul>
       </div>
       <div>
@@ -237,6 +282,6 @@
       <p>© <span id="year">2026</span> Pacific Northwest Debate Society. All rights reserved.</p>
     </div>
   </footer>
-  <script src="site.js?v=4"></script>
+  <script src="site.js?v=5"></script>
 </body>
 </html>
