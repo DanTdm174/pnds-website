@@ -43,7 +43,7 @@ h2 { font-size: clamp(1.875rem, 3vw, 2.5rem); }
 h3 { font-size: 1.5rem; margin-bottom: var(--s1); }
 p { margin: 0 0 var(--s2); }
 
-.container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--s3); }
+.container { width: 100%; max-width: var(--max); margin: 0 auto; padding-inline: var(--s3); }
 .prose { max-width: 62ch; }
 
 .skip-link { position: absolute; left: var(--s2); top: -48px; background: var(--ink); color: var(--white); padding: var(--s1) var(--s2); z-index: 10; }
@@ -175,22 +175,63 @@ p { margin: 0 0 var(--s2); }
   .footer-grid > :first-child { grid-column: 1 / -1; }
 }
 @media (max-width: 640px) {
-  .container { padding: 0 var(--s2); }
-  .nav-list { gap: var(--s3); }
+  body { font-size: 16px; }
+  .container { padding-inline: var(--s2); }
+  .header-inner { height: 64px; }
+  .nav-list { gap: 20px; }
   .nav-hide-sm { display: none; }
-  .brand-name { font-size: 1rem; }
-  .impact-grid { grid-template-columns: 1fr; }
-  .impact-item, .impact-item:first-child { border-left: 0; padding: var(--s2) 0; flex-direction: row-reverse; justify-content: space-between; align-items: baseline; gap: var(--s2); }
-  .impact-num { margin: 0; }
-  .impact-item + .impact-item { border-top: 1px solid var(--line); }
-  .event { grid-template-columns: auto 1fr; gap: var(--s3); align-items: start; }
-  .event .button { grid-column: 1 / -1; justify-self: start; }
-  .past-item { grid-template-columns: 1fr; gap: 4px; }
-  .team-grid { grid-template-columns: 1fr; gap: var(--s6); }
-  .member img { max-width: 320px; }
+  .brand-name { font-size: .9375rem; }
+
+  .hero { padding: var(--s6) 0 var(--s6); }
+  .hero-grid { gap: var(--s4); }
+  .eyebrow { margin-bottom: var(--s2); }
+  .lede { font-size: 1.0625rem; }
+  .button-row { margin-top: var(--s3); }
+  .hero .button-row .button { flex: 1 1 auto; text-align: center; }
+  .photo-frame { padding: 6px; }
+
+  /* Impact: three compact columns */
+  .impact-item, .impact-item:first-child { padding: var(--s2) 10px; }
+  .impact-item:first-child { padding-left: 0; }
+  .impact-item:last-child { padding-right: 0; }
+  .impact-num { font-size: 1.875rem; }
+  .impact-item dt { font-size: .6875rem; letter-spacing: .06em; line-height: 1.35; }
+
+  .section { padding: var(--s6) 0; }
+  .section-rule { padding-top: 0; }
+  .section-head { margin-bottom: var(--s3); }
   .section-head::after { display: none; }
+
+  .event { grid-template-columns: auto 1fr; gap: var(--s2); align-items: start; padding: var(--s3) 0; }
+  .date-badge { width: 64px; padding: 6px 0; }
+  .date-badge .d { font-size: 1.5rem; }
+  .event .button { grid-column: 1 / -1; justify-self: stretch; text-align: center; }
+  .past-item { grid-template-columns: 1fr; gap: 4px; padding: var(--s3) 0; }
+  .past-year { font-size: 1.25rem; }
+
+  /* Team: compact rows, small portrait beside name and role */
+  .team-grid { grid-template-columns: 1fr; gap: 0; }
+  .member { display: grid; grid-template-columns: 96px 1fr; column-gap: var(--s2); padding: var(--s3) 0; border-top: 1px solid var(--line); }
+  .member:first-child { border-top: 0; padding-top: 0; }
+  .member img { width: 96px; margin: 0; }
+  .member h3 { font-size: 1.3125rem; }
+  .member-body { display: contents; }
+  .member h3, .member .role { grid-column: 2; }
+  .member h3 { align-self: end; }
+  .member .role { align-self: start; margin-bottom: 0; }
+  .member img { grid-row: 1 / span 2; }
+  .member-bio, .bio-toggle { grid-column: 1 / -1; }
+  .member-bio { margin-top: var(--s2); }
+  .bio-toggle { justify-self: start; }
+
+  .band-inner .button { align-self: stretch; text-align: center; }
+  .sponsor-panel { padding: var(--s3); }
+  .sponsor-panel .button { flex: 1 1 auto; text-align: center; }
+
+  .footer-grid { gap: var(--s4); padding-top: var(--s6); padding-bottom: var(--s4); }
 }
 @media (max-width: 400px) {
-  .brand-name { display: none; }
+  .brand-name { font-size: 0; }
+  .brand-name::before { content: "PNDS"; font-size: 1.125rem; }
   .footer-grid { grid-template-columns: 1fr; }
 }
