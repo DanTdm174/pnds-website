@@ -121,6 +121,15 @@ p { margin: 0 0 var(--s2); }
 
 /* Team */
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s6) var(--s4); align-items: start; }
+/* Each card shares its rows (photo, name, role, bio, button) with the other cards in its row,
+   so names, roles and "Read bio" buttons line up even when a role wraps to two lines. */
+@supports (grid-template-rows: subgrid) {
+  .team-grid { row-gap: 0; margin-bottom: calc(var(--s6) * -1); }
+  .member { display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 0; padding-bottom: var(--s6); }
+  .member-body { display: contents; }
+  .member .role { align-self: start; }
+  .bio-toggle { align-self: end; justify-self: start; }
+}
 .member img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; background: var(--line); border: 1px solid var(--line); margin-bottom: var(--s2); }
 .member h3 { margin-bottom: 2px; }
 .member .role { font-size: .8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: var(--s2); }
@@ -131,8 +140,8 @@ p { margin: 0 0 var(--s2); }
 .member-bio li { margin-bottom: 4px; }
 .member-bio li::marker { color: var(--accent); }
 
-/* Collapsed bios (only when JS is running, so the text is never hidden without a way to open it) */
-.js .member-bio.is-collapsed { max-height: calc(1.65em * 5); overflow: hidden; position: relative;
+/* Bio excerpts (only when JS is running; the full bio opens in a dialog) */
+.js .member-bio.is-collapsed { height: calc(1.65em * 4); overflow: hidden; position: relative;
   -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
 .bio-toggle { margin-top: 12px; padding: 0 0 2px; background: none; border: 0; border-bottom: 1px solid var(--accent); color: var(--ink); font: 600 .875rem var(--font-body); cursor: pointer; }
 .bio-toggle:hover { color: var(--accent); }
@@ -140,6 +149,7 @@ p { margin: 0 0 var(--s2); }
 /* Class sign-up form */
 .signup { display: grid; grid-template-columns: 1fr 1.6fr; gap: var(--s6); margin-top: var(--s6); padding: var(--s4); background: var(--white); border: 1px solid var(--line-strong); }
 .signup-intro p { font-size: .9375rem; margin-bottom: 0; }
+.signup-intro p + p { margin-top: 12px; }
 .signup-form { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s2) var(--s3); }
 .field { display: flex; flex-direction: column; gap: 6px; }
 .field-wide { grid-column: 1 / -1; }
@@ -152,6 +162,34 @@ p { margin: 0 0 var(--s2); }
 .field textarea { resize: vertical; }
 .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
 .signup-form .button { cursor: pointer; }
+
+/* Bio dialog */
+.bio-dialog { width: min(720px, calc(100% - 32px)); max-height: min(85vh, 900px); padding: 0; border: 1px solid var(--line-strong); border-top: 3px solid var(--accent); border-radius: var(--radius); background: var(--paper); color: var(--ink-soft); box-shadow: none; overflow: hidden; }
+.bio-dialog::backdrop { background: rgba(17, 29, 46, .62); }
+.bio-dialog-inner { position: relative; max-height: inherit; overflow-y: auto; padding: var(--s4); overscroll-behavior: contain; }
+.bio-dialog-head { display: grid; grid-template-columns: 96px 1fr; gap: var(--s3); align-items: center; margin-bottom: var(--s3); padding-right: var(--s6); }
+.bio-dialog-head img { width: 96px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; border: 1px solid var(--line); }
+.bio-dialog-head h3 { margin-bottom: 4px; font-size: 1.75rem; }
+.bio-dialog-head .role { font-size: .8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0; }
+.bio-dialog-body { font-size: 1rem; }
+.bio-dialog-close { position: absolute; top: 12px; right: 12px; width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 1px solid var(--line-strong); border-radius: var(--radius); color: var(--ink); font: 400 1.75rem/1 var(--font-body); cursor: pointer; }
+.bio-dialog-close:hover { color: var(--accent); border-color: var(--accent); }
+html.dialog-open { overflow: hidden; }
+
+/* Course facts strip */
+.course-facts { display: flex; flex-wrap: wrap; gap: 0; margin: var(--s2) 0 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.course-facts > div { padding: 10px var(--s3) 10px 0; margin-right: var(--s3); border-right: 1px solid var(--line); }
+.course-facts > div:last-child { border-right: 0; margin-right: 0; }
+.course-facts dt { font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-muted); }
+.course-facts dd { margin: 0; font-weight: 600; color: var(--ink); }
+
+/* Sign-up actions */
+.form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.form-status { flex-basis: 100%; margin: 0; min-height: 1.65em; font-size: .875rem; font-weight: 600; color: var(--ink); }
+.form-status:not(:empty)::before { content: "✓ "; color: var(--accent); }
+
+/* Focus outlines that stay visible on dark sections */
+.band :focus-visible, .site-footer :focus-visible { outline-color: var(--on-ink); }
 
 /* Navy band */
 .band { background: var(--ink); color: var(--on-ink); }
@@ -228,8 +266,8 @@ p { margin: 0 0 var(--s2); }
   .past-year { font-size: 1.25rem; }
 
   /* Team: compact rows, small portrait beside name and role */
-  .team-grid { grid-template-columns: 1fr; gap: 0; }
-  .member { display: grid; grid-template-columns: 96px 1fr; column-gap: var(--s2); padding: var(--s3) 0; border-top: 1px solid var(--line); }
+  .team-grid { grid-template-columns: 1fr; gap: 0; margin-bottom: 0; }
+  .member { display: grid; grid-row: auto; grid-template-rows: none; grid-template-columns: 96px 1fr; column-gap: var(--s2); padding: var(--s3) 0; border-top: 1px solid var(--line); }
   .member:first-child { border-top: 0; padding-top: 0; }
   .member img { width: 96px; margin: 0; }
   .member h3 { font-size: 1.3125rem; }
@@ -240,12 +278,24 @@ p { margin: 0 0 var(--s2); }
   .member img { grid-row: 1 / span 2; }
   .member-bio, .bio-toggle { grid-column: 1 / -1; }
   .member-bio { margin-top: var(--s2); }
-  .bio-toggle { justify-self: start; }
+  .bio-toggle { justify-self: start; align-self: start; }
+  .js .member-bio.is-collapsed { height: calc(1.65em * 3); }
+
+  .bio-dialog { width: calc(100% - 16px); max-height: calc(100dvh - 32px); }
+  .bio-dialog-inner { padding: var(--s3) var(--s2); }
+  .bio-dialog-head { grid-template-columns: 72px 1fr; gap: var(--s2); padding-right: 52px; }
+  .bio-dialog-head img { width: 72px; }
+  .bio-dialog-head h3 { font-size: 1.375rem; }
+  .bio-dialog-close { top: 8px; right: 8px; }
+
+  .course-facts { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; }
+  .course-facts > div { padding-right: 12px; margin-right: 12px; }
+  .course-facts dd { font-size: .9375rem; line-height: 1.35; }
+  .form-actions .button { width: 100%; }
 
   .band-inner .button { align-self: stretch; text-align: center; }
   .signup { padding: var(--s3) var(--s2); gap: var(--s3); margin-top: var(--s4); }
   .signup-form { grid-template-columns: 1fr; }
-  .signup-form .button { width: 100%; }
   .sponsor-panel { padding: var(--s3); }
   .sponsor-panel .button { flex: 1 1 auto; text-align: center; }
 

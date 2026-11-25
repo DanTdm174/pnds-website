@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pacific Northwest Debate Society (PNDS)</title>
-  <meta name="description" content="Student-run debate society in BC offering affordable debate classes, camps, and tournaments. See upcoming events, meet the executive team, and apply to join our staff.">
+  <meta name="description" content="Student-run debate society in BC offering free debate classes and low-cost camps and tournaments. See upcoming events, meet the executive team, and apply to join our staff.">
   <meta name="theme-color" content="#111D2E">
   <link rel="canonical" href="https://dantdm174.github.io/pnds-website/">
   <meta property="og:type" content="website">
@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -50,7 +50,7 @@
         <div class="hero-copy">
           <p class="eyebrow">BC &amp; Pacific Northwest · Est. 2023</p>
           <h1 id="hero-title">Affordable debate coaching and tournaments, run by students.</h1>
-          <p class="lede">PNDS is a student-led, non-profit society running low-cost classes, camps, and tournaments for debaters in BC and beyond. What we earn from events is reinvested in our programs.</p>
+          <p class="lede">PNDS is a student-led, non-profit society running free debate classes and low-cost camps and tournaments for debaters in BC and beyond. What we earn from events is reinvested in our programs.</p>
           <div class="button-row">
             <a class="button" href="#events">See our events</a>
             <a class="button button-secondary" href="#apply">Join the staff</a>
@@ -68,19 +68,19 @@
 
     <section class="impact" aria-label="Our impact so far">
       <div class="container">
-        <!-- Edit these figures as they change. -->
+        <!-- Update these figures as they change. -->
         <dl class="impact-grid">
           <div class="impact-item">
             <dt>Students coached</dt>
-            <dd class="impact-num">—</dd>
+            <dd class="impact-num">350+</dd>
           </div>
           <div class="impact-item">
-            <dt>Tournaments &amp; camps hosted</dt>
-            <dd class="impact-num">—</dd>
+            <dt>Saved in debate tuition</dt>
+            <dd class="impact-num">$250K</dd>
           </div>
           <div class="impact-item">
-            <dt>Funds reinvested in programs</dt>
-            <dd class="impact-num">—</dd>
+            <dt>Of funds reinvested in programs</dt>
+            <dd class="impact-num">100%</dd>
           </div>
         </dl>
       </div>
@@ -96,7 +96,21 @@
           <div class="event-body">
             <p class="event-meta">Ongoing · Zoom · Tuesdays, 4:00–5:30 pm PT</p>
             <h3>PNDS Fall Courses 2026</h3>
-            <p>Our debate classes are running now, every Tuesday from 4:00 to 5:30 pm Pacific Time. It’s not too late to join. Email us or message our WeChat (pnds_inquiry) to sign up.</p>
+            <p>Our debate classes are running now, every Tuesday from 4:00 to 5:30 pm Pacific Time. It’s not too late to join. Use the sign-up form below, email us, or message our WeChat (pnds_inquiry).</p>
+            <dl class="course-facts">
+              <div>
+                <dt>Format</dt>
+                <dd>Live on Zoom</dd>
+              </div>
+              <div>
+                <dt>Grades</dt>
+                <dd>Grade 3+</dd>
+              </div>
+              <div>
+                <dt>Cost</dt>
+                <dd>Free</dd>
+              </div>
+            </dl>
           </div>
           <a class="button" href="mailto:pnds.inquiry@gmail.com?subject=Joining%20Fall%20Courses%202026">Join by email</a>
         </article>
@@ -104,7 +118,8 @@
         <div class="signup" id="signup">
           <div class="signup-intro">
             <h3 id="signup-title">Sign up for Fall Courses</h3>
-            <p>Fill this in and press the button. It opens an email to us with your details filled in, so all you have to do is hit send. You can also message our WeChat (pnds_inquiry).</p>
+            <p>Fill this in and press the button. It opens an email to us with your details filled in, so all you have to do is hit send.</p>
+            <p>No email app on this device? Press “Copy details” and paste them into Gmail, Outlook, or WeChat (pnds_inquiry). Send them to pnds.inquiry@gmail.com.</p>
           </div>
           <form class="signup-form" id="signup-form" aria-labelledby="signup-title" action="mailto:pnds.inquiry@gmail.com" method="post" enctype="text/plain">
             <div class="field">
@@ -135,8 +150,10 @@
               <label for="su-notes">Anything we should know? <span class="optional">(optional)</span></label>
               <textarea id="su-notes" name="Notes" rows="3"></textarea>
             </div>
-            <div class="field-wide">
+            <div class="field-wide form-actions">
               <button class="button" type="submit">Write the sign-up email</button>
+              <button class="button button-secondary" type="button" id="signup-copy" hidden>Copy details</button>
+              <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
             </div>
           </form>
         </div>
@@ -193,7 +210,7 @@
                   <li>2021 Harvard National Tournament: Octafinalist</li>
                 </ul>
               </div>
-              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-flora-tu" hidden>Read bio</button>
+              <button class="bio-toggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="bio-dialog" data-bio="bio-flora-tu" hidden>Read bio</button>
             </div>
           </article>
           <article class="member">
@@ -212,7 +229,7 @@
                   <li>2024 Berkeley Invitational: Quarterfinalist</li>
                 </ul>
               </div>
-              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-angelina-guo" hidden>Read bio</button>
+              <button class="bio-toggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="bio-dialog" data-bio="bio-angelina-guo" hidden>Read bio</button>
             </div>
           </article>
           <article class="member">
@@ -223,7 +240,7 @@
               <div class="member-bio" id="bio-marcus-zhang">
                 <p>As a junior at Magee Secondary School, Marcus is beyond ecstatic to serve as Co-President of PNDS for the 2026–27 term. He is committed to breaking down the pervasive barriers that prevent young and blossoming students from pursuing debate by providing free classes and tournament opportunities. He hopes that all new debaters will become enamoured with debate as he once was as a naive fourth grader, and that they are able to find their own voice within PNDS or debate in general. In his free time, he can be found stuck choosing which toppings to get on his Oakberry bowl, trying to understand (with much failure) whatever critical theory he has stumbled upon, or simply perusing the newest items within a grocery store.</p>
               </div>
-              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-marcus-zhang" hidden>Read bio</button>
+              <button class="bio-toggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="bio-dialog" data-bio="bio-marcus-zhang" hidden>Read bio</button>
             </div>
           </article>
           <article class="member">
@@ -241,7 +258,7 @@
                   <li>SchoolReach: 3rd at Alberta Provincials (Junior), 4th at Nationals</li>
                 </ul>
               </div>
-              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-miguel-de-las-alas" hidden>Read bio</button>
+              <button class="bio-toggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="bio-dialog" data-bio="bio-miguel-de-las-alas" hidden>Read bio</button>
             </div>
           </article>
           <article class="member">
@@ -260,7 +277,7 @@
                   <li>2023 Harvard National Tournament: Doubles</li>
                 </ul>
               </div>
-              <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-victor-chen" hidden>Read bio</button>
+              <button class="bio-toggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="bio-dialog" data-bio="bio-victor-chen" hidden>Read bio</button>
             </div>
           </article>
         </div>
@@ -281,7 +298,7 @@
       <div class="container sponsors-grid">
         <div>
           <h2 id="sponsors-title">Sponsors &amp; support</h2>
-          <p class="prose">Sponsorship keeps our classes and tournaments low-cost, and helps us reach more students. Our sponsorship package sets out partnership tiers, where your name appears, and how funds are used.</p>
+          <p class="prose">Sponsorship keeps our classes free and our tournaments low-cost, and helps us reach more students. Our sponsorship package sets out partnership tiers, where your name appears, and how funds are used.</p>
         </div>
         <div class="sponsor-panel">
           <h3>Sponsorship package</h3>
@@ -294,6 +311,19 @@
         </div>
       </div>
     </section>
+    <dialog class="bio-dialog" id="bio-dialog" aria-labelledby="bio-dialog-name">
+      <div class="bio-dialog-inner">
+        <button class="bio-dialog-close" type="button" aria-label="Close bio">×</button>
+        <div class="bio-dialog-head">
+          <img alt="" width="540" height="688">
+          <div>
+            <h3 id="bio-dialog-name"></h3>
+            <p class="role"></p>
+          </div>
+        </div>
+        <div class="bio-dialog-body member-bio"></div>
+      </div>
+    </dialog>
   </main>
 
   <footer class="site-footer">
@@ -327,6 +357,6 @@
       <p>© <span id="year">2026</span> Pacific Northwest Debate Society. All rights reserved.</p>
     </div>
   </footer>
-  <script src="site.js?v=6"></script>
+  <script src="site.js?v=7"></script>
 </body>
 </html>
