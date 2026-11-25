@@ -19,17 +19,17 @@ All of these are in `index.html`. Search for the text you want to change.
 
 **Upcoming event.** Find the `<article class="event">` block under "Upcoming events". Change the date badge, the meta line, the title and the description. If you add a second event, copy the whole `<article>`.
 
-**Class sign-up form.** It doesn't send anything by itself. It opens an email to pnds.inquiry@gmail.com with the student's answers filled in, and they press send. If the course name changes, update the subject and first line in `site.js` (search for "Fall Courses").
+**Class sign-up form.** It doesn't send anything by itself. It opens an email to pnds.inquiry@gmail.com with the student's answers filled in, and they press send. People without an email app can press "Copy details" and paste it into Gmail or WeChat instead. If the course name changes, update the subject and first line in `site.js` (search for "Fall Courses").
 
 **Past events.** Each one is an `<li class="past-item">` in the "Past events" list. Put the newest at the top.
 
-**Impact numbers.** Under the hero there are three numbers that currently show "—". Replace the dash in each `<dd class="impact-num">` with the real figure.
+**Impact numbers.** The three figures under the hero (students coached, tuition saved, funds reinvested) are in the `<dd class="impact-num">` tags. Only put confirmed numbers here.
 
 **Team.** Each exec is one `<article class="member">`. To add someone:
 
 1. Put their photo in `assets/team/`, cropped portrait. 540 × 688 px matches the others.
 2. Copy an existing member block and change the photo path, name, role, bio and awards.
-3. Give the bio a new `id` and make the button's `aria-controls` match it. Otherwise "Read bio" won't open the right one.
+3. Give the bio a new `id` and make the button's `data-bio` match it. Otherwise "Read bio" won't open the right one.
 
 To remove someone, delete their `<article>`.
 
