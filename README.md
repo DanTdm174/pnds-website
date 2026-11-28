@@ -2,7 +2,7 @@
 
 Site for the Pacific Northwest Debate Society. It's plain HTML and CSS hosted on GitHub Pages, so there's nothing to install or build. Edit a file, push to `main`, and the live site updates in a few minutes:
 
-https://dantdm174.github.io/pnds-website/
+https://pacificnorthwestdebatesociety.org/
 
 ## Files
 
