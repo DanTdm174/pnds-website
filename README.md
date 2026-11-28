@@ -41,6 +41,12 @@ To remove someone, delete their `<article>`.
 
 **Sponsorship package.** Right now the button emails us asking for it. Once there's a PDF, put it in `assets/` and change the button's `href` to the file path and add `download`.
 
+## Chinese pages
+
+`zh-hans.html` (Simplified, for Mandarin-speaking families) and `zh-hant.html` (Traditional, Hong Kong style, for Cantonese-speaking families) are translated copies of `index.html`. The language links at the very top of every page switch between them. Team bios stay in English on purpose.
+
+When you change text on the English page, make the same change in both Chinese pages, or ask someone fluent to. If you add a section, copy its HTML into both files and translate the text. The layout and styling are shared, so `styles.css` and `site.js` changes apply to all three pages automatically.
+
 ## After editing CSS or JS
 
 Browsers hang on to old copies of `styles.css` and `site.js`. When you change either one, bump the number at the end of its link in `index.html` (and `404.html` for the CSS), e.g. `styles.css?v=8` to `styles.css?v=9`. Otherwise people (and you) might keep seeing the old version.

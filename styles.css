@@ -49,6 +49,21 @@ p { margin: 0 0 var(--s2); }
 .skip-link { position: absolute; left: var(--s2); top: -48px; background: var(--ink); color: var(--white); padding: var(--s1) var(--s2); z-index: 10; }
 .skip-link:focus { top: var(--s2); }
 
+/* Chinese pages: system Chinese fonts after the Latin ones (Latin text keeps the site fonts) */
+html:lang(zh-Hans) { --font-body: "Plus Jakarta Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif; --font-head: "Newsreader", "Songti SC", "Noto Serif SC", "SimSun", serif; }
+html:lang(zh-Hant) { --font-body: "Plus Jakarta Sans", "PingFang HK", "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif; --font-head: "Newsreader", "Songti TC", "Noto Serif TC", "PMingLiU", serif; }
+html:lang(zh-Hans) .eyebrow, html:lang(zh-Hant) .eyebrow,
+html:lang(zh-Hans) .event-meta, html:lang(zh-Hant) .event-meta { letter-spacing: .04em; }
+.team-note { margin: calc(var(--s2) * -1) 0 var(--s4); font-size: .875rem; color: var(--ink-muted); }
+
+/* Language bar */
+.lang-bar { background: var(--ink); font-size: .8125rem; }
+.lang-bar .container { display: flex; justify-content: flex-end; gap: var(--s3); padding-top: 6px; padding-bottom: 6px; }
+.lang-bar a { color: var(--on-ink-muted); text-decoration: none; }
+.lang-bar a:hover { color: var(--white); text-decoration: underline; }
+.lang-bar a[aria-current="page"] { color: var(--white); font-weight: 600; }
+.lang-bar :focus-visible { outline-color: var(--on-ink); }
+
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--s2); height: 72px; }
@@ -169,6 +184,8 @@ p { margin: 0 0 var(--s2); }
 .bio-dialog-inner { position: relative; max-height: inherit; overflow-y: auto; padding: var(--s4); overscroll-behavior: contain; }
 .bio-dialog-head { display: grid; grid-template-columns: 96px 1fr; gap: var(--s3); align-items: center; margin-bottom: var(--s3); padding-right: var(--s6); }
 .bio-dialog-head img { width: 96px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; border: 1px solid var(--line); }
+/* Team portraits: one gentle grade so different backgrounds read as a set */
+.member img, .bio-dialog-head img { filter: saturate(.82) sepia(.08) contrast(1.04); }
 .bio-dialog-head h3 { margin-bottom: 4px; font-size: 1.75rem; }
 .bio-dialog-head .role { font-size: .8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0; }
 .bio-dialog-body { font-size: 1rem; }
@@ -340,3 +357,6 @@ html.dialog-open { overflow: hidden; }
   .brand-name::before { content: "PNDS"; font-size: 1.125rem; }
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* 404 page logo */
+.notfound-logo { border-radius: 50%; margin-bottom: var(--s4); }

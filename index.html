@@ -3,10 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Pacific Northwest Debate Society (PNDS)</title>
   <meta name="description" content="Student-run debate society in BC offering free debate classes and low-cost camps and tournaments. See upcoming events, meet the executive team, and apply to join our staff.">
   <meta name="theme-color" content="#111D2E">
   <link rel="canonical" href="https://pacificnorthwestdebatesociety.org/">
+  <link rel="alternate" hreflang="en" href="https://pacificnorthwestdebatesociety.org/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://pacificnorthwestdebatesociety.org/zh-hans.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://pacificnorthwestdebatesociety.org/zh-hant.html">
+  <link rel="alternate" hreflang="x-default" href="https://pacificnorthwestdebatesociety.org/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Pacific Northwest Debate Society">
   <meta property="og:url" content="https://pacificnorthwestdebatesociety.org/">
@@ -22,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=14">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,10 +47,18 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <nav class="lang-bar" aria-label="Language">
+    <div class="container">
+      <a href="./" lang="en" hreflang="en" aria-current="page">English</a>
+      <a href="zh-hans.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a>
+      <a href="zh-hant.html" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a>
+    </div>
+  </nav>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Pacific Northwest Debate Society, home">
-        <img src="assets/pnds-logo.jpg" alt="PNDS logo" width="40" height="40">
+        <img src="assets/pnds-mark.svg" alt="PNDS logo" width="40" height="40">
         <span class="brand-name">Pacific Northwest <br>Debate Society</span>
       </a>
       <nav aria-label="Primary">
@@ -184,7 +198,7 @@
             <div class="field-wide form-actions">
               <button class="button" type="submit">Write the sign-up email</button>
               <button class="button button-secondary" type="button" id="signup-copy" hidden>Copy details</button>
-              <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
+              <p class="form-status" id="signup-status" role="status" aria-live="polite" data-msg-copied="Copied! Paste it into an email to {email}." data-msg-failed="Couldn’t copy automatically. Please email {email} with the details above."></p>
             </div>
             <p class="form-privacy field-wide">We only use these details to contact you about PNDS classes.</p>
           </form>
@@ -204,7 +218,7 @@
               <p class="event-meta">Online tournament</p>
               <h3>Pacific Youth Invitational</h3>
               <p>A low-cost, online charity tournament. Proceeds after expenses went to charity.</p>
-              <a class="text-link" href="https://www.tabroom.com/index/tourn/main.mhtml?tourn_id=29899" target="_blank" rel="noopener">View on Tabroom</a>
+              <a class="text-link" href="https://www.tabroom.com/index/tourn/main.mhtml?tourn_id=29899" target="_blank" rel="noopener noreferrer">View on Tabroom</a>
             </div>
           </li>
           <li class="past-item">
@@ -352,7 +366,7 @@
           </details>
           <details>
             <summary>How do I contact you?</summary>
-            <p>Email <a href="mailto:pnds.inquiry@gmail.com">pnds.inquiry@gmail.com</a>, message our WeChat (pnds_inquiry), or find us on <a href="https://www.instagram.com/pnds.official25/" target="_blank" rel="noopener">Instagram</a>.</p>
+            <p>Email <a href="mailto:pnds.inquiry@gmail.com">pnds.inquiry@gmail.com</a>, message our WeChat (pnds_inquiry), or find us on <a href="https://www.instagram.com/pnds.official25/" target="_blank" rel="noopener noreferrer">Instagram</a>.</p>
           </details>
         </div>
       </div>
@@ -364,7 +378,7 @@
           <h2 id="apply-title">Apply to join our staff</h2>
           <p class="prose">We're looking for students who want to help run PNDS, from organizing tournaments and outreach to coaching new debaters. Fill out the staff application and we'll be in touch.</p>
         </div>
-        <a class="button button-light" href="https://docs.google.com/forms/d/e/1FAIpQLSfHoYiHTnvd3KwUg0J9CZU2TYNbHpRsZJ3i6p0VU7gei8gdMw/viewform" target="_blank" rel="noopener">Open the staff application</a>
+        <a class="button button-light" href="https://docs.google.com/forms/d/e/1FAIpQLSfHoYiHTnvd3KwUg0J9CZU2TYNbHpRsZJ3i6p0VU7gei8gdMw/viewform" target="_blank" rel="noopener noreferrer">Open the staff application</a>
       </div>
     </section>
 
@@ -413,7 +427,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="assets/pnds-logo.jpg" alt="PNDS logo" width="48" height="48">
+        <img src="assets/pnds-mark.svg" alt="PNDS logo" width="48" height="48">
         <p>PNDS is a student-led debate society that works to provide an accessible and interconnected educational environment for debaters in BC and beyond.</p>
       </div>
       <div>
@@ -432,7 +446,7 @@
         <h2>Contact us</h2>
         <ul>
           <li><a href="mailto:pnds.inquiry@gmail.com">pnds.inquiry@gmail.com</a></li>
-          <li><a href="https://www.instagram.com/pnds.official25/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.instagram.com/pnds.official25/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           <li>WeChat: pnds_inquiry</li>
         </ul>
       </div>
@@ -442,6 +456,6 @@
       <p>© <span id="year">2026</span> Pacific Northwest Debate Society. All rights reserved.</p>
     </div>
   </footer>
-  <script src="site.js?v=7"></script>
+  <script src="site.js?v=8"></script>
 </body>
 </html>
