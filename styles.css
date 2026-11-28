@@ -184,6 +184,8 @@ html:lang(zh-Hans) .event-meta, html:lang(zh-Hant) .event-meta { letter-spacing:
 .bio-dialog-inner { position: relative; max-height: inherit; overflow-y: auto; padding: var(--s4); overscroll-behavior: contain; }
 .bio-dialog-head { display: grid; grid-template-columns: 96px 1fr; gap: var(--s3); align-items: center; margin-bottom: var(--s3); padding-right: var(--s6); }
 .bio-dialog-head img { width: 96px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; border: 1px solid var(--line); }
+/* Team portraits: one gentle grade so different backgrounds read as a set */
+.member img, .bio-dialog-head img { filter: saturate(.82) sepia(.08) contrast(1.04); }
 .bio-dialog-head h3 { margin-bottom: 4px; font-size: 1.75rem; }
 .bio-dialog-head .role { font-size: .8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0; }
 .bio-dialog-body { font-size: 1rem; }
@@ -355,3 +357,6 @@ html.dialog-open { overflow: hidden; }
   .brand-name::before { content: "PNDS"; font-size: 1.125rem; }
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* 404 page logo */
+.notfound-logo { border-radius: 50%; margin-bottom: var(--s4); }
