@@ -113,10 +113,11 @@
       if (!form.reportValidity()) return;
       var d = details();
       var text = 'To: ' + TO + '\nSubject: ' + d.subject + '\n\n' + d.body;
-      var done = function () { say('Copied! Paste it into an email to ' + TO + '.'); };
+      var msg = function (key, fallback) { return (status.getAttribute('data-msg-' + key) || fallback).replace('{email}', TO); };
+      var done = function () { say(msg('copied', 'Copied! Paste it into an email to {email}.')); };
       var failed = function () {
         if (fallbackCopy(text)) done();
-        else say('Couldn’t copy automatically. Please email ' + TO + ' with the details above.');
+        else say(msg('failed', 'Couldn’t copy automatically. Please email {email} with the details above.'));
       };
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(done, failed);

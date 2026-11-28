@@ -7,6 +7,10 @@
   <meta name="description" content="Student-run debate society in BC offering free debate classes and low-cost camps and tournaments. See upcoming events, meet the executive team, and apply to join our staff.">
   <meta name="theme-color" content="#111D2E">
   <link rel="canonical" href="https://pacificnorthwestdebatesociety.org/">
+  <link rel="alternate" hreflang="en" href="https://pacificnorthwestdebatesociety.org/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://pacificnorthwestdebatesociety.org/zh-hans.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://pacificnorthwestdebatesociety.org/zh-hant.html">
+  <link rel="alternate" hreflang="x-default" href="https://pacificnorthwestdebatesociety.org/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Pacific Northwest Debate Society">
   <meta property="og:url" content="https://pacificnorthwestdebatesociety.org/">
@@ -22,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=13">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,6 +44,14 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="lang-bar" aria-label="Language">
+    <div class="container">
+      <a href="./" lang="en" hreflang="en" aria-current="page">English</a>
+      <a href="zh-hans.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a>
+      <a href="zh-hant.html" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a>
+    </div>
+  </nav>
 
   <header class="site-header">
     <div class="container header-inner">
@@ -184,7 +196,7 @@
             <div class="field-wide form-actions">
               <button class="button" type="submit">Write the sign-up email</button>
               <button class="button button-secondary" type="button" id="signup-copy" hidden>Copy details</button>
-              <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
+              <p class="form-status" id="signup-status" role="status" aria-live="polite" data-msg-copied="Copied! Paste it into an email to {email}." data-msg-failed="Couldn’t copy automatically. Please email {email} with the details above."></p>
             </div>
             <p class="form-privacy field-wide">We only use these details to contact you about PNDS classes.</p>
           </form>
@@ -442,6 +454,6 @@
       <p>© <span id="year">2026</span> Pacific Northwest Debate Society. All rights reserved.</p>
     </div>
   </footer>
-  <script src="site.js?v=7"></script>
+  <script src="site.js?v=8"></script>
 </body>
 </html>
