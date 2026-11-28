@@ -21,6 +21,10 @@ All of these are in `index.html`. Search for the text you want to change.
 
 **Class sign-up form.** It doesn't send anything by itself. It opens an email to pnds.inquiry@gmail.com with the student's answers filled in, and they press send. People without an email app can press "Copy details" and paste it into Gmail or WeChat instead. If the course name changes, update the subject and first line in `site.js` (search for "Fall Courses").
 
+**Parent FAQ.** Each question is a `<details>` block in the "Questions from parents" section. Copy one to add a question. Only put answers there that the exec team has agreed on.
+
+**Class photo.** `assets/photos/zoom-class.jpg` has faces and names blurred on purpose. Don't put photos of students with visible faces or names on the site without their parents' permission.
+
 **Past events.** Each one is an `<li class="past-item">` in the "Past events" list. Put the newest at the top.
 
 **Impact numbers.** The three figures under the hero (students coached, tuition saved, funds reinvested) are in the `<dd class="impact-num">` tags. Only put confirmed numbers here.
